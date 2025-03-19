@@ -2,6 +2,7 @@ package com.java.core.streams;
 
 public class Address {
 	// Srikanth Added
+	// Pull from sts
 	private String location;
 	private String State;
 
