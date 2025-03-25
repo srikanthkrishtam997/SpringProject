@@ -19,5 +19,6 @@ public class EmployeController {
 		List<String> l = emp.stream().map(n -> n.getAddress().getLocation()).collect(Collectors.toList());
 		System.out.println("All Address Location:"+l);
 		System.out.println("List Of Emp::"+emp);
+		//test
 	}
 }
