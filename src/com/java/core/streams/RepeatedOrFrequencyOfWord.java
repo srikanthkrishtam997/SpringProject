@@ -1,6 +1,7 @@
 package com.java.core.streams;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -12,14 +13,25 @@ public class RepeatedOrFrequencyOfWord {
 		List<String> words = Arrays.asList("apple", "banana", "apple", "cherry", "banana", "apple");
 		Map<String, Long> wordFrequency = words.stream()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-		wordFrequency.forEach((word, count) -> System.out.println(word + ": " + count));
-		
-		
+//		wordFrequency.forEach((word, count) -> System.out.println(word + ": " + count));
+		System.out.println("wordFrequency:::" + wordFrequency);
 		// Set
 		List<String> wordsSet = Arrays.asList("apple", "banana", "apple", "cherry", "banana", "apple");
 
 //		Set<String> set=wordsSet.stream().collect(Collectors.toSet());
-		Set<String> set=wordsSet.stream().distinct().collect(Collectors.toSet());
+		Set<String> set = wordsSet.stream().distinct().collect(Collectors.toSet());
 		System.out.println(set);
+
+		// Using for loop
+		Map<String, Integer> wordFreq = new HashMap<>();
+		for (int i = 0; i < wordsSet.size(); i++) {
+			if (!wordFreq.containsKey(wordsSet.get(i))) {
+				wordFreq.put(wordsSet.get(i), 1);
+			} else {
+				wordFreq.put(wordsSet.get(i), wordFreq.get(wordsSet.get(i)) + 1);
+
+			}
+		}
+		System.out.println("wordFreq::" + wordFreq);
 	}
 }

@@ -14,6 +14,6 @@ public class ConvertOneObjToAnother {
 		l.add(ob1);
 		l.add(ob2);
 		List<Obj2> newObj=  l.stream().map(n -> new Obj2(n.getName(),n.getLocation())).collect(Collectors.toList());
-		newObj.forEach(System.out::println);
+		
 	}
 }

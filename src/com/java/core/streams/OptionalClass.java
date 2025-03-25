@@ -8,11 +8,10 @@ public class OptionalClass {
 		Optional<String> nonNullOptional = Optional.of("Hello");
 
 		System.out.println(nonNullOptional.empty());
-		if(nonNullOptional.isPresent())
+		if (nonNullOptional.isPresent())
 			nonNullOptional.ifPresent(v -> v.startsWith("H"));
-        System.out.println(nonNullOptional.get()); // Output: Hello
-		System.out.println("99"+nonNullOptional.of("Srikanth"));
-		nonNullOptional.of("Srikanth");
-System.out.println(nonNullOptional.orElse("Default Value"));
+		System.out.println(nonNullOptional.get()); // Output: Hello
+		System.out.println("99" + nonNullOptional.of("Srikanth"));
+		System.out.println(nonNullOptional.orElse("Default Value"));
 	}
 }
