@@ -15,10 +15,10 @@ public class EmployeController {
 		emp.add(e1);
 		emp.add(e2);
 		e1.setEmpName("Dhana");
-		System.out.println("Before::"+e1.getEmpName());
+		System.out.println("Before::" + e1.getEmpName());
 		List<String> l = emp.stream().map(n -> n.getAddress().getLocation()).collect(Collectors.toList());
-		System.out.println("All Address Location:"+l);
-		System.out.println("List Of Emp::"+emp);
-		//test
+		System.out.println("All Address Location:" + l);
+		System.out.println("List Of Emp::" + emp);
+		// test
 	}
 }
